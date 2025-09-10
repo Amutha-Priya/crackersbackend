@@ -84,6 +84,11 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000", 
+    "https://gcrackers.netlify.app"
+]
+
 # Internationalization
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
@@ -96,3 +101,4 @@ STATIC_ROOT = BASE_DIR / "staticfiles"  # for deployment (collectstatic)
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+TIME_ZONE = "Asia/Kolkata"

@@ -8,6 +8,6 @@ router = DefaultRouter()
 router.register(r'products', ProducttableViewSet) 
 
 urlpatterns = [
-    path('create/', ProductCreateView.as_view(), name='create'),  
+     path('product-api/', ProductCreateView.as_view()), 
         path('', include(router.urls)),
 ]

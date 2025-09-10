@@ -11,6 +11,11 @@ class ProducttableViewSet(viewsets.ModelViewSet):
     serializer_class = ProducttableSerializer
 
 class ProductCreateView(APIView):
+    def get(self,request):
+        products=Producttable.objects.all()
+        serializer=ProducttableSerializer(products,many=True)
+        return Response(serializer.data,status=status.HTTP_200_OK)
+    
     def post(self, request):
         serializer = ProducttableSerializer(data=request.data)
         if serializer.is_valid():
