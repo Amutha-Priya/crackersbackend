@@ -23,12 +23,12 @@ DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 
 # Hosts
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "*").split(",")
-
+CORS_ALLOW_ALL_ORIGINS = True
 # Application definition
 INSTALLED_APPS = [
-    "myapp",
-    "corsheaders",
+     "corsheaders",
     "rest_framework",
+    "myapp",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
